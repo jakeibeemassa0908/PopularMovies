@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.theotherside.popularmovies">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -17,15 +17,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingActivity"
-                  android:label="@string/settings"
-                  android:parentActivityName=".MovieListActivity">
 
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".MovieListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MovieListActivity" />
+        </activity>
+
+        <activity
+            android:name=".MovieDetailActivity"
+            android:label="@string/movie_detail"
+            android:parentActivityName=".MovieListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MovieListActivity"/>
-        </activity>
 
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        tools:text="Title"/>
+
+    <TextView
+        android:id="@+id/movie_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        tools:text="Image"/>
+
+    <TextView
+        android:id="@+id/movie_overview"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="12dp"
+        android:layout_height="wrap_content"
+        tools:text="Overview"/>
+
+    <TextView
+        android:id="@+id/movie_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        tools:text="Rating"/>
+
+    <TextView
+        android:id="@+id/movie_release"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        tools:text="Release"/>
+
+
+</LinearLayout>

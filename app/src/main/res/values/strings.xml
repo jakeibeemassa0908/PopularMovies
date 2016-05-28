@@ -4,6 +4,7 @@
     <string name="pref_movies_rating">top_rated</string>
     <string name="pref_movies_key">list_type</string>
     <string name="pref_movies_title">Sort Order</string>
+    <string name="movie_detail">Movie Detail</string>
 
     <string-array name="pref_movies_sort_titles">
         <item>Top Rated</item>
