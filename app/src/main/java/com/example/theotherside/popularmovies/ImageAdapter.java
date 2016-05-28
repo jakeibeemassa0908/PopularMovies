@@ -9,23 +9,27 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+
 /**
  * Created by theotherside on 5/27/16.
  */
 public class ImageAdapter extends BaseAdapter {
 
     private Context mContext;
+    ArrayList<Movie> movies;
 
-    public ImageAdapter(Context c) {
+    public ImageAdapter(Context c, ArrayList<Movie> movies) {
         mContext = c;
+        this.movies = movies;
     }
 
     public int getCount() {
-        return 10;
+        return movies.size();
     }
 
     public Object getItem(int position) {
-        return null;
+        return movies.get(position);
     }
 
     public long getItemId(int position) {
@@ -38,17 +42,15 @@ public class ImageAdapter extends BaseAdapter {
         if (convertView == null) {
             // if it's not recycled, initialize some attributes
             imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(700, 700));
+            imageView.setLayoutParams(new GridView.LayoutParams(720, 900));
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         } else {
             imageView = (ImageView) convertView;
         }
 
-        Picasso.with(mContext).load("http://i.imgur.com/DvpvklR.png").into(imageView);
+        String imageLink = movies.get(position).getImage();
+        Picasso.with(mContext).load("http://image.tmdb.org/t/p/w500/"+imageLink).into(imageView);
         return imageView;
     }
 
-    // references to our images
-    private Integer[] mThumbIds = {
-    };
 }
