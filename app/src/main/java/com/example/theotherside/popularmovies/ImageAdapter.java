@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class ImageAdapter extends BaseAdapter {
 
     private Context mContext;
-    ArrayList<Movie> movies;
+    ArrayList<Movie> movies = new ArrayList<>();
 
     public ImageAdapter(Context c, ArrayList<Movie> movies) {
         mContext = c;
@@ -52,7 +52,7 @@ public class ImageAdapter extends BaseAdapter {
         String imageLink = movies.get(position).getImage();
 
         Picasso.with(mContext).load("http://image.tmdb.org/t/p/w500/"+imageLink).into(imageView);
-        
+
         return imageView;
     }
 
