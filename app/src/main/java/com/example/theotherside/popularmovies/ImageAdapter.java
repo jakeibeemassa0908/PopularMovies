@@ -51,7 +51,7 @@ public class ImageAdapter extends BaseAdapter {
         //Get image links from passed arraylist
         String imageLink = movies.get(position).getImage();
 
-        Picasso.with(mContext).load("http://image.tmdb.org/t/p/w500/"+imageLink).into(imageView);
+        Picasso.with(mContext).load("http://image.tmdb.org/t/p/w185/"+imageLink).into(imageView);
 
         return imageView;
     }
