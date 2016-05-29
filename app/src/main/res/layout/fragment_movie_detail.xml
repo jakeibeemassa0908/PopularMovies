@@ -29,7 +29,7 @@
                 android:id="@+id/movie_image"
                 android:layout_width="0dp"
                 android:layout_weight="2"
-                android:layout_height="match_parent"
+                android:layout_height="200dp"
                 android:layout_marginBottom="12dp"
                 tools:text="Image"/>
 

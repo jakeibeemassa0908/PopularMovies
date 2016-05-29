@@ -10,7 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
+
 
 /**
  * Created by theotherside on 5/28/16.
@@ -41,7 +42,7 @@ public class MovieDetailFragment extends Fragment {
         //get the year only from release date
         releaseTextview.setText(mMovie.getReleaseDate().split("-")[0]);
 
-        Picasso.with(getActivity()).load("http://image.tmdb.org/t/p/w500/"+mMovie.getImage()).into(imageView);
+        Glide.with(getActivity()).load("http://image.tmdb.org/t/p/w500/"+mMovie.getImage()).into(imageView);
 
         return rootView;
     }

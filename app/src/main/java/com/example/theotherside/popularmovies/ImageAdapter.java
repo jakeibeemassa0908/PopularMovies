@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -51,7 +51,7 @@ public class ImageAdapter extends BaseAdapter {
         //Get image links from passed arraylist
         String imageLink = movies.get(position).getImage();
 
-        Picasso.with(mContext).load("http://image.tmdb.org/t/p/w185/"+imageLink).into(imageView);
+        Glide.with(mContext).load("http://image.tmdb.org/t/p/w500/"+imageLink).into(imageView);
 
         return imageView;
     }
