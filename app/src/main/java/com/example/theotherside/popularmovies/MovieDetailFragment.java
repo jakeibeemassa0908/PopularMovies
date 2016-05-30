@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 /**
  * Created by theotherside on 5/28/16.
@@ -19,21 +22,22 @@ import com.bumptech.glide.Glide;
 public class MovieDetailFragment extends Fragment {
 
     private Movie mMovie;
-    TextView titleTextview,overviewTextview,ratingTextview,releaseTextview;
-    ImageView imageView;
+    @BindView(R.id.movie_title) TextView titleTextview;
+    @BindView(R.id.movie_overview) TextView overviewTextview;
+    @BindView(R.id.movie_rating) TextView ratingTextview;
+    @BindView(R.id.movie_release) TextView releaseTextview;
+    @BindView(R.id.movie_image) ImageView imageView;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_movie_detail,container,false);
 
+        ButterKnife.bind(this,rootView);
+
         Intent detailIntent = getActivity().getIntent();
         mMovie = detailIntent.getParcelableExtra(MovieListFragment.EXTRA_MOVIES);
 
-        titleTextview = (TextView) rootView.findViewById(R.id.movie_title);
-        imageView = (ImageView) rootView.findViewById(R.id.movie_image);
-        overviewTextview = (TextView) rootView.findViewById(R.id.movie_overview);
-        ratingTextview = (TextView) rootView.findViewById(R.id.movie_rating);
-        releaseTextview = (TextView) rootView.findViewById(R.id.movie_release);
 
         titleTextview.setText(mMovie.getTitle());
         overviewTextview.setText(mMovie.getOverview());
