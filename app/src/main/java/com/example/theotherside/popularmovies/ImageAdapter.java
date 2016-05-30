@@ -52,6 +52,12 @@ public class ImageAdapter extends BaseAdapter {
         String imageLink = movies.get(position).getImage();
 
         Glide.with(mContext).load("http://image.tmdb.org/t/p/w500/"+imageLink).into(imageView);
+        /**
+        Glide.with(context)
+                .load(url)
+                .placeholder(R.drawable.user_placeholder)
+                .error(R.drawable.user_placeholder_error)
+                .into(imageView); **/
 
         return imageView;
     }
